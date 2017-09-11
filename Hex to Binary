@@ -1,0 +1,51 @@
+
+func hexToBinary(anyHex: String) {
+    var someHexNumber = anyHex
+    var binaryArray = [Int]()
+    var rem: Int = 0
+    var tempBinaryArray = [Int]()
+    var temp = 0
+
+    
+    
+    for current in someHexNumber.characters {
+        if current == "A" {
+            binaryArray.append(1010)
+        }
+            
+        else if current == "B" {
+            binaryArray.append(1011)
+        }
+        else if current == "C" {
+            binaryArray.append(1100)
+        }
+        else if current == "D" {
+            binaryArray.append(1101)
+        }
+        else if current == "E" {
+            binaryArray.append(1110)
+        }
+        else if current == "F" {
+            binaryArray.append(1111)
+ 
+        }
+        else {
+            temp = (Int(String(current)))!
+            while temp != 0 {
+                
+                rem = temp % 2
+                temp = temp / 2
+                tempBinaryArray.append(rem)
+                
+            }
+            tempBinaryArray.reverse()
+            binaryArray.append(contentsOf: tempBinaryArray)
+
+        }
+
+    }
+    print(binaryArray)
+    
+}
+
+hexToBinary(anyHex: "BB8")
