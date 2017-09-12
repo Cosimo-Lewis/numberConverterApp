@@ -6,13 +6,10 @@ func hexToBinary(anyHex: String) {
     var tempBinaryArray = [Int]()
     var temp = 0
 
-    
-    
     for current in someHexNumber.characters {
         if current == "A" {
             binaryArray.append(1010)
         }
-            
         else if current == "B" {
             binaryArray.append(1011)
         }
@@ -27,25 +24,19 @@ func hexToBinary(anyHex: String) {
         }
         else if current == "F" {
             binaryArray.append(1111)
- 
         }
         else {
             temp = (Int(String(current)))!
             while temp != 0 {
-                
                 rem = temp % 2
                 temp = temp / 2
                 tempBinaryArray.append(rem)
-                
-            }
+                }
             tempBinaryArray.reverse()
             binaryArray.append(contentsOf: tempBinaryArray)
-
+            }
         }
-
-    }
     print(binaryArray)
-    
-}
+    }
 
 hexToBinary(anyHex: "BB8")
