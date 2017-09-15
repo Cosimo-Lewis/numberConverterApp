@@ -37,6 +37,7 @@ func addBinaryArrays(binary1: String, binary2: String) {
         }
         else if (someBinaryArray1[I] == "1" && someBinaryArray2[I] == "1" && carry == "0") || (someBinaryArray1[I] == "1" && someBinaryArray2[I] == "0" && carry == "1") || (someBinaryArray1[I] == "0" && someBinaryArray2[I] == "1" && carry == "1") {
             binaryArray.append("0")
+            carry = "1"
         }
         else {
               binaryArray.append("1")
