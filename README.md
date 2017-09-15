@@ -17,4 +17,5 @@ Created with Swift in Xcode
 
 Add in validation: Prescence, type, forced capitalization
 
+Cosimo Lewis is a coding god!!!
 
