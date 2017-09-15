@@ -1,0 +1,62 @@
+// Binary Addition
+
+import UIKit
+
+func addBinaryArrays(binary1: String, binary2: String) {
+    
+    var someBinaryArray1 = Array(binary2.characters)
+    var someBinaryArray2 = Array(binary1.characters)
+    var binaryArray = [String]()
+    var carry: String = "0"
+    var number: Int = 0
+    
+    someBinaryArray1.reverse()
+    someBinaryArray2.reverse()
+    
+    if someBinaryArray1.count < someBinaryArray2.count {
+        while someBinaryArray1.count < someBinaryArray2.count {
+            someBinaryArray1.append("0")
+        }
+    }
+    else {
+        while someBinaryArray2.count < someBinaryArray1.count {
+            someBinaryArray2.append("0")
+        }
+    }
+    
+
+    
+    number = someBinaryArray1.count - 1
+    print(someBinaryArray1)
+    print(someBinaryArray2)
+    
+    for I in 0 ... number {
+        if someBinaryArray1[I] == "0" && someBinaryArray2[I] == "0" && carry == "0" {
+            binaryArray.append("0")
+            print("0")
+        }
+        // I deeply apologise for the following section of horrific code, but it was the best solution I could come up with.
+        //If you can think of a better one that doesn't break the code, please feel free to implement it.
+        else if (someBinaryArray1[I] == "1" && someBinaryArray2[I] == "0" && carry == "0") || (someBinaryArray1[I] == "0" && someBinaryArray2[I] == "1" && carry == "0") || (someBinaryArray1[I] == "0" && someBinaryArray2[I] == "0" && carry == "1") {
+            binaryArray.append("1")
+            print("1")
+        }
+        else if (someBinaryArray1[I] == "1" && someBinaryArray2[I] == "1" && carry == "0") || (someBinaryArray1[I] == "1" && someBinaryArray2[I] == "0" && carry == "1") || (someBinaryArray1[I] == "0" && someBinaryArray2[I] == "1" && carry == "1") {
+            binaryArray.append("0")
+            carry = "1"
+            print("2")
+        }
+        else {
+              binaryArray.append("1")
+              carry = "1"
+            print("3")
+        }
+        
+    }
+    binaryArray.append(carry)
+    binaryArray.reverse()
+    print(binaryArray)
+}
+
+addBinaryArrays(binary1: "1101100", binary2: "10101")
+
