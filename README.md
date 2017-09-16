@@ -4,23 +4,23 @@ Converts different number systems to others
 
 Currently Supported Conversions:
 
-  Denary -> Binary
-  
-  Binary -> Denary
-  
-  Hex -> Binary
-  
-  Binary Addition
+      Denary -> Binary
+
+      Binary -> Denary
+
+      Hex -> Binary
+
+      Binary Addition
 
 Required Conversions:
 
-  Hex -> Denary
-  
-  Denary -> Hex
-  
-  Sign & Magnitude
-  
-  Two's complement
+      Hex -> Denary
+
+      Denary -> Hex
+
+      Sign & Magnitude
+
+      Two's complement
 
 Also includes Binary Addition function
 
