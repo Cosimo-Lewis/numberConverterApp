@@ -2,13 +2,19 @@
 
 Converts different number systems to others
 
-Supported Conversions:
+Currently Supported Conversions:
 
-Binary --> Denary
-Denary --> Binary
-Denary --> Hexadecimal
-Hexadecimal --> Binary
-Hexadecimal --> Denary
+  Denary -> Binary
+  Binary -> Denary
+  Hex -> Binary
+  Binary Addition
+
+Required Conversions:
+
+  Hex -> Denary
+  Denary -> Hex
+  Sign & Magnitude
+  Two's complement
 
 Also includes Binary Addition function
 
