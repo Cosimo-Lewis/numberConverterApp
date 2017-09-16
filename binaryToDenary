@@ -1,0 +1,13 @@
+func convertToDenary(anyBinary: String) {
+    var someBinaryNumber = anyBinary
+    var binaryValue: Int = Int(pow(Double(2),Double(anyBinary.characters.count-1)))
+    var finalValue = 0
+    
+    for character in someBinaryNumber.characters {
+        if character == "1" {
+            finalValue = finalValue + binaryValue
+        }
+        binaryValue = binaryValue / 2
+    }
+    print(Int(finalValue))
+}
