@@ -22,12 +22,12 @@ Required Conversions:
 
       Two's complement
 
-Also includes Binary Addition function
 
 Includes a 4 tab Menu relating to conversions of Binary, Denary, and Hex respectively
+
 Created with Swift in Xcode
 
 Add in validation: Prescence, type, forced capitalization
 
-Cosimo Lewis is a coding god!!!
+Cosimo Lewis is a coding dog!!!
 
