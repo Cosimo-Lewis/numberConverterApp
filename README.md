@@ -9,12 +9,12 @@ Currently Supported Conversions:
       Binary -> Denary
 
       Hex -> Binary
+      
+      Hex -> Denary
 
       Binary Addition
 
 Required Conversions:
-
-      Hex -> Denary
 
       Denary -> Hex
 
