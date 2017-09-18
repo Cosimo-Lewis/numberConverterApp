@@ -1,0 +1,75 @@
+//Two's Complement function
+
+func twoComplement(getBinary: String) {
+    
+    var binaryString = getBinary
+    var binaryComplement = [String]()
+    
+    var someBinaryArray1 = Array(getBinary.characters)
+    var someBinaryArray2 = [String]()
+    var binaryArray = [String]()
+    var carry: String = "0"
+    var number: Int = 0
+    
+    someBinaryArray1.reverse()
+    someBinaryArray2.append("1")
+    
+    if someBinaryArray1.count < someBinaryArray2.count {
+        while someBinaryArray1.count < someBinaryArray2.count {
+            someBinaryArray1.append("0")
+        }
+    }
+    else {
+        while someBinaryArray2.count < someBinaryArray1.count {
+            someBinaryArray2.append("0")
+        }
+    }
+    
+    number = someBinaryArray1.count - 1
+    
+    for I in 0 ... number {
+        if someBinaryArray1[I] == "0" && someBinaryArray2[I] == "0" && carry == "0" {
+            binaryArray.append("0")
+        }
+            // I deeply apologise for the following section of horrific code, but it was the best solution I could come up with.
+            //If you can think of a better one that doesn't break the code, please feel free to implement it.
+        else if (someBinaryArray1[I] == "1" && someBinaryArray2[I] == "0" && carry == "0") || (someBinaryArray1[I] == "0" && someBinaryArray2[I] == "1" && carry == "0") || (someBinaryArray1[I] == "0" && someBinaryArray2[I] == "0" && carry == "1") {
+            binaryArray.append("1")
+        }
+        else if (someBinaryArray1[I] == "1" && someBinaryArray2[I] == "1" && carry == "0") || (someBinaryArray1[I] == "1" && someBinaryArray2[I] == "0" && carry == "1") || (someBinaryArray1[I] == "0" && someBinaryArray2[I] == "1" && carry == "1") {
+            binaryArray.append("0")
+            carry = "1"
+        }
+        else {
+            binaryArray.append("1")
+            carry = "1"
+        }
+        
+    }
+    
+    binaryArray.append(carry)
+    
+    while binaryArray.count < 8 {
+        binaryArray.append("0")
+    }
+    
+    number = binaryArray.count - 1
+    
+    for I in 0 ... number {
+        if binaryArray[I] == "1" {
+            binaryComplement.append("0")
+        }
+        else {
+            binaryComplement.append("1")
+        }
+    }
+
+    binaryComplement.reverse()
+    print(binaryComplement)
+
+}
+
+twoComplement(getBinary: "1010")
+
+
+
