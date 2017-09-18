@@ -13,6 +13,8 @@ Currently Supported Conversions:
       Hex -> Denary
 
       Binary Addition
+      
+      Two's Complement
 
 Required Conversions:
 
@@ -20,14 +22,9 @@ Required Conversions:
 
       Sign & Magnitude
 
-      Two's complement
-
 
 Includes a 4 tab Menu relating to conversions of Binary, Denary, and Hex respectively
 
-Created with Swift in Xcode
-
 Add in validation: Prescence, type, forced capitalization
 
-Cosimo Lewis is a coding dog!!!
 
