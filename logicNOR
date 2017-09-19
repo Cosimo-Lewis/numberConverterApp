@@ -1,0 +1,43 @@
+//LOGIC functions
+
+import UIKit
+
+func NOR(norInput1: String, norInput2: String) {
+    var input1 = Array(norInput1.characters)
+    var input2 = Array(norInput2.characters)
+    var binaryArray = [String]()
+    var number: Int = 0
+    
+    input1.reverse()
+    input2.reverse()
+    
+    if input1.count < input2.count {
+        while input1.count < input2.count {
+            input1.append("0")
+        }
+    }
+    else {
+        while input2.count < input1.count {
+            input2.append("0")
+        }
+    }
+    
+    number = input1.count - 1
+    
+    for I in 0 ... number {
+        if input1[I] == "0" && input2[I] == "0" {
+            binaryArray.append("1")
+        }
+        else if (input1[I] == "0" && input2[I] == "1") || (input1[I] == "1" && input2[I] == "0") {
+            binaryArray.append("1")
+        }
+        else {
+            binaryArray.append("0")
+        }
+    }
+    binaryArray.reverse()
+    print(binaryArray)
+    
+}
+
+NOR(norInput1: "0011", norInput2: "1010")
