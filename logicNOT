@@ -1,0 +1,27 @@
+//LOGIC functions
+
+import UIKit
+
+func NOT(notInput1: String) {
+    var input1 = Array(notInput1.characters)
+    var binaryArray = [String]()
+    var number: Int = 0
+    
+    input1.reverse()
+    
+    number = input1.count - 1
+    
+    for I in 0 ... number {
+        if input1[I] == "0" {
+            binaryArray.append("1")
+        }
+        else {
+            binaryArray.append("0")
+        }
+    }
+    binaryArray.reverse()
+    print(binaryArray)
+    
+}
+
+NOT(notInput1: "0011")
