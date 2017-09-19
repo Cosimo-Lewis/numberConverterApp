@@ -15,13 +15,12 @@ Currently Supported Conversions:
       Binary Addition
       
       Two's Complement
+      
+      Sign & Magnitude
 
 Required Conversions:
 
       Denary -> Hex
-
-      Sign & Magnitude
-
 
 Includes a 4 tab Menu relating to conversions of Binary, Denary, and Hex respectively
 
