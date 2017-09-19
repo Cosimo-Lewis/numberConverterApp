@@ -2,10 +2,11 @@
 
 import UIKit
 
-func OR(getInput1: String, getInput2: String) {
+
+func OR(orInput1: String, orInput2: String) {
     
-    var input1 = Array(getInput1.characters)
-    var input2 = Array(getInput2.characters)
+    var input1 = Array(orInput1.characters)
+    var input2 = Array(orInput2.characters)
     var binaryArray = [String]()
     var number: Int = 0
     
@@ -41,4 +42,4 @@ func OR(getInput1: String, getInput2: String) {
     
 }
 
-OR(getInput1: "0011", getInput2: "1010")
+OR(orInput1: "0011", orInput2: "1010")
