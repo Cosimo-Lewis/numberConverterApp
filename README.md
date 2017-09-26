@@ -20,7 +20,13 @@ Currently Supported Conversions:
 
 Required Conversions:
 
-      Denary -> Hex
+      Denary -> Fixed point, v.v
+      
+      Denary -> fixed -> floating
+      
+      Normalised fl -> denary
+      
+      =- floating
 
 Includes a 4 tab Menu relating to conversions of Binary, Denary, and Hex respectively
 
