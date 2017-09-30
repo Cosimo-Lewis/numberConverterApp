@@ -21,10 +21,15 @@ Currently Supported Conversions:
       Logical Operations:
             
             AND
+            
             NAND
+            
             OR
+            
             NOR
+            
             NOT
+            
             XOR
 
 Required Conversions:
