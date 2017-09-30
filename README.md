@@ -17,6 +17,15 @@ Currently Supported Conversions:
       Two's Complement
       
       Sign & Magnitude
+      
+      Logical Operations:
+            
+            AND
+            NAND
+            OR
+            NOR
+            NOT
+            XOR
 
 Required Conversions:
 
