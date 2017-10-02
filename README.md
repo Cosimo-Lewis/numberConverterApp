@@ -34,16 +34,14 @@ Currently Supported Conversions:
 
 Required Conversions:
 
-      Denary -> Fixed point, v.v
+      Denary -> Fixed point
       
-      Denary -> fixed -> floating
+      Fixed point -> Floating point
       
-      Normalised fl -> denary
-      
-      =- floating
+      Normalised Floating Point -> Denary
 
 Includes a 4 tab Menu relating to conversions of Binary, Denary, and Hex respectively
 
-Add in validation: Prescence, type, forced capitalization
+Add in validation: Presence, type,
 
 
