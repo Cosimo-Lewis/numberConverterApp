@@ -1,0 +1,36 @@
+// Fixed Point
+import UIKit
+
+func fixedPoint(denaryInput: Float) {
+    var input = denaryInput
+    var intInput: Int = Int(input)
+    var decimalInput: Float = (input - Float(intInput))
+    var sub: Float = 0.5
+    var binaryArray = [String]()
+    
+    /* 
+     
+     Stick normal denary to binary conversion in here
+     Convert intInput
+ 
+    */
+    
+    while input != 0 {
+        input = input - sub
+        if input < 0 {
+            input = input + sub
+            sub = sub / 2
+            binaryArray.append("0")
+        }
+        else if input > 0 {
+            sub = sub / 2
+            binaryArray.append("1")
+        }
+        else {
+            binaryArray.append("1")
+        }
+    }
+    print(binaryArray)
+}
+
+fixedPoint(denaryInput: 0.75)
