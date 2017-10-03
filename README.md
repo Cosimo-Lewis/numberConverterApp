@@ -31,10 +31,12 @@ Currently Supported Conversions:
             NOT
             
             XOR
+            
+       Denary to Fixed Point
 
 Required Conversions:
 
-      Denary -> Fixed point
+      Bitwise Manipulation (Logic, Arithmetic, Circular)
       
       Fixed point -> Floating point
       
