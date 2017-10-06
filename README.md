@@ -1,4 +1,5 @@
 # numberConverterApp
+All code must be Seena-proofed
 
 Converts different number systems to others
 
@@ -32,11 +33,11 @@ Currently Supported Conversions:
             
             XOR
             
-       Denary to Fixed Point
+      Denary to Fixed Point
+       
+      All shifts
 
 Required Conversions:
-
-      Bitwise Manipulation (Logic, Arithmetic, Circular)
       
       Fixed point -> Floating point
       
