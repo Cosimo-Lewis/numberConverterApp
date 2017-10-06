@@ -1,0 +1,44 @@
+import UIKit
+
+func denaryToHex {
+
+ar theNumber = Int(enteredNumber2.text!)
+        var rem = 0
+        var remArray = [Int]()
+        var hexArray = [String]()
+        while theNumber != 0{
+            rem = theNumber! % 16
+            remArray.append(rem)
+            theNumber = theNumber! / 16
+        }
+        
+        for i in remArray {
+            if remArray[i]  > 9 {
+                if remArray[i] == 10 {
+                    hexArray.append("A")
+                }
+                if remArray[i] == 11 {
+                    hexArray.append("B")
+                }
+                if remArray[i] == 12 {
+                    hexArray.append("C")
+                }
+                if remArray[i] == 13 {
+                    hexArray.append("D")
+                }
+                if remArray[i] == 14 {
+                    hexArray.append("E")
+                }
+                if remArray[i] == 14 {
+                    hexArray.append("F")
+                }
+            }
+            else if remArray[i] < 10 {
+                hexArray.append(String(remArray[i]))
+            }
+            
+        }
+        
+        remArray.reverse()
+        convertedNumber2.text = "\(remArray)
+} 
