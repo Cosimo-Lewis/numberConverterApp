@@ -1,0 +1,9 @@
+func circularLeft(binaryInput: String) {
+    var binaryArray = Array(binaryInput.characters)
+    var carry: Character = "0"
+    var length: Int = binaryArray.count - 1
+    
+    binaryArray.insert(carry, at: length)  // Inserts the value of "carry" at the end of the array
+    carry = binaryArray[0]       // Sets variable "carry" to the first item in the array
+    binaryArray.remove(at: 0)    // Removes first item in array
+}
