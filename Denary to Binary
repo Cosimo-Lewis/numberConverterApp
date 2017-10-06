@@ -9,7 +9,7 @@ func denaryToBinary
         re = theNumber! % 2
         theNumber = theNumber! / 2
         binaryArray.append(re)
-    }
+  }
         
-    binaryArray.reverse()
-    convertedNumber.text = "\(binaryArray)"
+  binaryArray.reverse()
+  convertedNumber.text = "\(binaryArray)"
