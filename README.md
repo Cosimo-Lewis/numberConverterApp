@@ -1,5 +1,5 @@
 # numberConverterApp
-All code must be Seena-proofed
+All code must be idiot-proofed
 
 Converts different number systems to others
 
