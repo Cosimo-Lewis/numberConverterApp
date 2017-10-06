@@ -1,1 +1,16 @@
 
+Import UIKit
+
+func denaryToBinary
+
+  var theNumber = Int(enteredNumber!.text!)
+  var re: Int = 0
+  var binaryArray = [Int]()
+  while theNumber != 0 {
+        re = theNumber! % 2
+        theNumber = theNumber! / 2
+        binaryArray.append(re)
+    }
+        
+    binaryArray.reverse()
+    convertedNumber.text = "\(binaryArray)"
