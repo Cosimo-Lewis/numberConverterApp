@@ -1,0 +1,74 @@
+// Shifts
+// Has been Seena-proofed
+
+import UIKit
+
+// Logic Shifts
+
+func shiftLeft(binaryInput: String) {
+    var binaryArray = Array(binaryInput.characters)
+    var carry: Character = "0"
+    
+    carry = binaryArray[0]     // Sets variable "carry" equal to first item in array
+    binaryArray.remove(at: 0)  // Removes first item in array
+    binaryArray.append("0")    // Appends a 0 onto the end of the array
+}
+
+shiftLeft(binaryInput: "110010")
+
+
+
+func shiftRight(binaryInput: String) {
+    var binaryArray = Array(binaryInput.characters)
+    var carry: Character = "0"
+    var length: Int = binaryArray.count - 1     // Gives the location of the last item in the array
+        
+    carry = binaryArray[length]     // Sets "carry" equal to the last item in the array, as determined by the variable "length"
+    binaryArray.remove(at: length)  // Removes the element at location "length"
+    binaryArray.insert("0", at: 0)  // Inserts a 0 into the first location in the array
+}
+
+shiftRight(binaryInput: "110011")
+
+
+
+// Arithmetic Shifts
+
+func arLeft(binaryInput: String) {
+    var binaryArray = Array(binaryInput.characters)
+    var carry: Character = "0"
+    
+    carry = binaryArray[1]      // Sets "carry" equal to the second item in the array, i.e. the one after the sign bit
+    binaryArray.remove(at: 1)   // Removes the second item in the array
+    binaryArray.append("0")     // Appends a 0 onto the end
+}
+
+arLeft(binaryInput: "110011")
+
+
+
+func arRight(binaryInput: String) {
+    var binaryArray = Array(binaryInput.characters)
+    var carry: Character = "0"
+    var length: Int = binaryArray.count - 1
+    
+    carry = binaryArray[length]     // Sets "carry" equal to the last item in the array, as determined by the variable "length"
+    binaryArray.remove(at: length)  // Removes the element at location "length"
+    binaryArray.insert(binaryArray[0], at: 0)  // Inserts a 0 into the first location in the array
+}
+
+arRight(binaryInput: "110011")
+
+
+// Circular Shift
+
+func circular(binaryInput: String) {
+    var binaryArray = Array(binaryInput.characters)
+    var carry: Character = "0"
+    var length: Int = binaryArray.count - 1
+    
+    binaryArray.insert(carry, at: 0)  // Inserts the value of "carry" at the start of the array
+    carry = binaryArray[length]       // Sets variable "carry" the last item in the array
+    binaryArray.remove(at: length)    // Removes last item in array
+}
+circular(binaryInput: "110011")
